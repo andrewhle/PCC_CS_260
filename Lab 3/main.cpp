@@ -19,9 +19,9 @@ int main()
 
     cout << "----------------------------------------------------------------------" << endl;
     cout << "Removing the last element.";
-    //removeLast(head);
-    //display(head);
-    //destroy(head);
+    removeLast(head);
+    display(head);
+    destroy(head);
 
 
     return 0;

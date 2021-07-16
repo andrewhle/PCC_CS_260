@@ -1,16 +1,21 @@
 #include <iostream>
 #include "list.h"
 
-void reverse(node* head, node*& newHead) {
-    if (head == nullptr || head->next == nullptr) {
-        newHead = head;
-        return;
-    }
-    reverse(head->next, newHead);
-    node* x = head->next;
-    x->next = head;
-    head->next = nullptr;
+void reverse(node* head, node* &newHead){
+
+        if(head != nullptr){
+                node* new_node = new node;
+                new_node->data = head->data;
+                new_node->next = newHead;
+                newHead = new_node;
+        }
+        else{
+                return;
+        }
+        reverse(head->next, newHead);
+
 }
+
 
 void removeLast(node*& head) {
 
